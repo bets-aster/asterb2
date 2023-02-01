@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>search</title>
+    </h:head>
+    <style type="text/css">
+    
+        .format
+        {
+                                    font-weight:bold;
+
+                font-size: large;
+                font-family : cursive;
+                color: red;  }
+                #o{
+                    
+                 background-image: URL("poto/image/adl.jpg");
+                  background-size: 100%; 
+                
+                
+                }
+                .table{
+                    background: white;
+                }
+                </style>
+
+    <h:body id="o">
+        
+    <h>Search</h>
+    <br> </br>
+    <div>
+        <h:form>
+            
+            <h:outputLabel value="id"/>
+            <h:inputText  id="yr" value="#{sear.id}"/><tr></tr>
+            <h:commandButton id="sea" value="submit" action="#{sear.searchs()}"/>   
+                        <br></br>
+                        <div class="table">
+             <h:dataTable id="data" value="#{sear.searchs()}" var="rec" >
+              <h:column>
+                <f:facet name="header">
+                    ID__
+                </f:facet>
+                <h:outputText value="#{rec.id}"/>  
+                </h:column>
+            <h:column>
+                <f:facet name="header">
+                    FILE NUMBER__
+                </f:facet>
+                <h:outputText value="#{rec.fileNumber}"/>  
+                
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    FULL NAME__
+                </f:facet>
+                <h:outputText value="#{rec.fullName}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  GENDER__
+                </f:facet>
+               <h:outputText value="#{rec.gender}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    AGE__
+                </f:facet>
+               <h:outputText value="#{rec.age}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  NATIONALITY__
+                </f:facet>
+                <h:outputText value="#{rec.nationality}"/>  
+            </h:column>
+             <h:column>
+                   
+                <f:facet name="header">
+                    ADDRESS__
+                </f:facet>
+                <h:outputText value="#{rec.address}"/>  
+                
+</h:column>
+                <h:column>
+                <f:facet name="header">
+                  TYPES OF OFFENSE__
+                </f:facet>
+                <h:outputText value="#{rec.typeOfOffness}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                   BAIL STATUS__
+                </f:facet>
+                 <h:outputText value="#{rec.status}"/>  
+            </h:column>
+             <h:column>
+                  <f:facet name="header">
+                   DATE__
+                </f:facet>
+                 <h:outputText value="#{rec.date}"/>  
+            </h:column>
+             <h:column>
+
+                <f:facet name="header">
+                   JAIL TERM__ 
+                </f:facet>
+               <h:outputText value="#{rec.jialterm}"/>  
+            </h:column>
+            
+        </h:dataTable>         
+                        </div>
+            
+        </h:form>
+        
+        
+        
+    </div>
+    </h:body>
+</html>
+              

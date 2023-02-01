@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+     
+    <h:head>
+        <title>CRIMINAL RECORD </title>
+    </h:head>
+    
+       <style type="text/css">
+    
+        .format
+        {
+                                    font-weight:bold;
+
+                font-size: large;
+                font-family : cursive;
+                color: red;  }
+                #mw{
+                   
+                background-image: URL("poto/image/adl.jpg");
+                  background-size: 100%; 
+                
+                
+                }
+                .add4{
+                    margin-left: 200px;
+                    margin-top: 200px;
+                    width: 300px;
+                    height: 150px;
+                    background: wheat;
+                     
+             border-radius: 10px;
+                }
+                
+                
+</style>
+    <h:body id="mw">
+              
+  
+        
+        <div class="add4">
+            <h:form>
+                <h>      ADMIN SIGN IN</h>
+                
+                <br></br>
+         <h:outputLabel value="fileNumber"/>
+                <h:inputText id="lo" value="#{addmin.fileNumber}"/>
+                                    <br></br>
+                <h:outputLabel value="position"/>
+                <h:inputText id="go" value="#{addmin.position}"/>
+                                    <br></br>
+
+                <h:outputLabel value="USER NAME"/> 
+                <h:inputText id="nm" value="#{addmin.userName}"/>
+                <br></br>
+                <h:outputLabel value="PASSWORD"/>
+                <h:inputSecret id="PS" value="#{addmin.password}"/>
+                              
+                <br></br>
+                <h:commandButton id="bggt" value="submit" action="#{addmin.datas()}"/>
+                <h:commandButton id="bgtt" value="RESET"
+                                 type="reset"/>
+                          </h:form>
+             </div>
+  
+    </h:body>
+    
+</html>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     
+   
+    <h:head>
+        <title>add record</title>
+    </h:head>
+            <style type="text/css">
+    
+        .format
+        {
+                                    font-weight:bold;
+
+                font-size: large;
+                font-family : cursive;
+                color: green;  }
+                #tbo{
+                   
+                background-image: URL("poto/image/LO.jpg");
+                  background-size: 100%; 
+                
+                
+                }
+                .one{
+               position: fixed;
+               width: 400px;
+               height: 450px;
+              left: 515px;
+              top: 5px;
+               border-radius: 30px;
+               background: white;
+               opacity: 0.5px;
+           }
+           .rt {
+               top:10px;
+               
+               left:50px  ;  
+           }
+ 
+    </style>
+    <h:body id="tbo">
+        
+        
+        
+        
+        <h:outputLabel value="id"/>
+            <h:inputText  id="yr" value="#{sear.id}"/>
+             <h:commandButton id="sub" value="Submit" action="#{meet.edits(id)}"/>
+        <div class="one">
+           
+        <h:form >
+           
+                <br></br>
+                 <div class="rt">EDIT INFORMATION </div>
+                  <h:outputLabel id="i" value="ID"/> 
+                <h:inputText id="nmm" value="#{meet.id}"/>
+               
+    
+                <br></br>
+                <h:outputLabel id="io" value="FULLNAME"/> 
+                <h:inputText id="m" value="#{meet.fullName}"/>
+               
+    
+                <br></br>
+                 <h:outputLabel id="in" value="Gender"/>
+                 <h:selectOneRadio value="#{meet.gender}">
+                     <f:selectItem itemValue="Male" itemLabel="Male"/>
+                     <f:selectItem  itemValue="Female" itemLabel="Female"/>
+                 </h:selectOneRadio>
+       
+        <br></br>
+        <h:outputLabel id="ik" value="Age"/>
+            
+            <h:inputText  id="age" value="#{meet.age}" />
+                          
+                           <br></br>
+                             <h:outputLabel id="ij" value="Nationality"/>
+            
+            <h:inputText  id="nation" value="#{meet.nationality}" />
+              
+                            <br></br>
+                                <h:outputLabel id="ih" value="Address"/> 
+                <h:inputText id="nm" value="#{meet.address}"/>
+               
+    
+                <br></br>
+                
+                               <h:outputLabel id="ie" value="TypeOfOffness"/>
+                               <h:inputText id="tp" value="#{meet.typeOfOffness}"/>
+                           <br></br>
+     
+        <h:outputLabel id="ia" value="FileNumber"/>    
+         <h:inputText id="ti" value="#{meet.fileNumber}"/>
+              <br></br>
+                   <h:outputLabel id="ib" value="Date"/> 
+                <h:inputText id="n" value="#{meet.date}"/>
+               
+    
+                <br></br>
+            <h:outputLabel id="ic" value="BailStatus"/>
+                  <br></br>
+             <h:selectOneRadio id="id" value="#{meet.status}">
+                     <f:selectItem itemValue="Yes" itemLabel="yes"/>
+                     <f:selectItem  itemValue="No" itemLabel="No"/>
+                 </h:selectOneRadio>
+               <br></br>
+      
+        
+              
+         <h:outputLabel id="iv" value="Jialterm"/>    
+         <h:inputText id="tiu" value="#{meet.jialterm}"/>
+              <br></br>
+
+
+             
+                
+            <h:commandButton id="sub" value="Submit" action="#{meet.edits(id)}"/>
+            <h:commandButton id="RE" value="RESET" type="reset"/>
+        </h:form>
+            
+        </div>
+    </h:body>
+</html>

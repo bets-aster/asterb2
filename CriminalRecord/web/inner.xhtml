@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>APPLication Home Page</title>
+    </h:head>
+    <style type="text/css">
+    
+        .format
+        {
+                                    font-weight:bold;
+
+                font-size: large;
+                font-family : cursive;
+                color: red;  }
+                #go{
+                    background-image: URL("poto/image/LO.jpg");
+                  background-size: 100%; 
+            
+                
+                
+                }
+                    
+                 .ass
+                 {
+                     margin-left: 700px;
+                     background-color: black;
+                     display: flex;
+                     flex-direction: row;
+                 }
+                    
+                 .btu{
+                    margin-left: 1px;
+                    width: 110px;
+                    height: 40px;
+                    background-color:white ;
+                    font-weight: bold;
+                   
+                 }
+              
+</style>
+            
+  <h:body id="go">
+      <div id="id" class="ass">
+        <h:form>
+            
+          
+           
+            <h:commandButton class="btu" value="AddRcord" action="record"/>
+
+           
+
+            <h:commandButton  class="btu" value="Search" action="search"/>
+            
+           
+
+            <h:commandButton class="btu" value="Edit" action="edit"/>
+          
+            <h:commandButton  class="btu" value="View" action="view"/>
+            
+              <h:commandButton  class="btu" value="AddMinSignUp" action="addMin"/>
+            
+        
+        </h:form></div>
+    </h:body>
+    </html>
